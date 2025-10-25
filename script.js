@@ -3,7 +3,7 @@ const trackName = document.getElementById('track-name');
 const record = document.querySelector('.record');
 
 const tracks = [
-    { src: 'audio/track1.mp3', name: '׃ֲֽֽ - ׁגמבמהא' },
+    { src: 'audio/track1.mp3', name: 'UNNV - Freedom' },
     { src: 'audio/track2.mp3', name: 'Disco Shit' },
     { src: 'audio/track3.mp3', name: 'BE ft. MM' },
     { src: 'audio/track4.mp3', name: 'Lyrics of 2 scoundrels' },
