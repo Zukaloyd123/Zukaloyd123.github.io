@@ -1,4 +1,4 @@
-﻿/* FunPay-inspired dark theme with pure black background and 10 visible GIFs */
+﻿/* FunPay-inspired dark theme with pure black background and 10 compact GIFs */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-    /* Background GIFs (10 positions, fixed pixels, no overlap) */
+    /* Background GIFs (10 compact positions, fixed pixels, no overlap) */
     body::before,
     body::after,
     body .gif-1,
@@ -25,60 +25,60 @@ body {
         content: '';
         position: absolute;
         background: url('images/background.gif') no-repeat center/cover;
-        opacity: 0.5; /* Increased opacity for brighter GIFs */
+        opacity: 0.7; /* Brighter GIFs */
         z-index: -1;
         width: 80px;
         height: 80px;
     }
-    /* Fixed positions to ensure visibility and no overlap */
+    /* Compact positions to ensure visibility and no overlap */
     body::before {
         top: 20px;
         left: 20px;
     }
 
     body::after {
-        bottom: 20px;
-        right: 20px;
+        top: 20px;
+        left: 110px;
     }
 
 .gif-1 {
-    top: 100px;
-    left: 120px;
-}
-
-.gif-2 {
-    top: 100px;
-    right: 120px;
-}
-
-.gif-3 {
-    bottom: 100px;
-    left: 120px;
-}
-
-.gif-4 {
-    top: 200px;
-    left: 40px;
-}
-
-.gif-5 {
-    top: 300px;
-    right: 40px;
-}
-
-.gif-6 {
-    top: 150px;
+    top: 20px;
     left: 200px;
 }
 
+.gif-2 {
+    top: 110px;
+    left: 20px;
+}
+
+.gif-3 {
+    top: 110px;
+    left: 110px;
+}
+
+.gif-4 {
+    top: 110px;
+    left: 200px;
+}
+
+.gif-5 {
+    top: 200px;
+    left: 20px;
+}
+
+.gif-6 {
+    top: 200px;
+    left: 110px;
+}
+
 .gif-7 {
-    bottom: 150px;
-    right: 200px;
+    top: 200px;
+    left: 200px;
 }
 
 .gif-8 {
-    top: 50px;
-    right: 200px;
+    top: 290px;
+    left: 20px;
 }
 
 header {
@@ -221,5 +221,51 @@ footer {
     body::before, body::after, .gif-1, .gif-2, .gif-3, .gif-4, .gif-5, .gif-6, .gif-7, .gif-8 {
         width: 50px;
         height: 50px;
+        /* Adjusted positions for smaller screens */
+        top: 10px !important;
+        left: 10px !important;
+    }
+
+    body::after {
+        left: 70px !important;
+    }
+
+    .gif-1 {
+        left: 130px !important;
+    }
+
+    .gif-2 {
+        top: 70px !important;
+        left: 10px !important;
+    }
+
+    .gif-3 {
+        top: 70px !important;
+        left: 70px !important;
+    }
+
+    .gif-4 {
+        top: 70px !important;
+        left: 130px !important;
+    }
+
+    .gif-5 {
+        top: 130px !important;
+        left: 10px !important;
+    }
+
+    .gif-6 {
+        top: 130px !important;
+        left: 70px !important;
+    }
+
+    .gif-7 {
+        top: 130px !important;
+        left: 130px !important;
+    }
+
+    .gif-8 {
+        top: 190px !important;
+        left: 10px !important;
     }
 }
