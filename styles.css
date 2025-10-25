@@ -172,6 +172,24 @@ footer {
     z-index: 1;
 }
 
+.player {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+.playlist-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #1AFF00;
+}
+
 /* Animations */
 @keyframes pulse-border {
     0% {
