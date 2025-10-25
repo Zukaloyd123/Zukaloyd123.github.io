@@ -1,0 +1,225 @@
+﻿/* FunPay-inspired dark theme with pure black background and 10 smaller GIFs */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Pure black background */
+    color: #e0e0e0;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+    /* Background GIFs (10 positions, no overlap) */
+    body::before,
+    body::after,
+    body .gif-1,
+    body .gif-2,
+    body .gif-3,
+    body .gif-4,
+    body .gif-5,
+    body .gif-6,
+    body .gif-7,
+    body .gif-8 {
+        content: '';
+        position: absolute;
+        background: url('images/background.gif') no-repeat center/cover;
+        opacity: 0.2;
+        z-index: -1;
+        width: 80px;
+        height: 80px;
+    }
+
+    body::before {
+        top: 5%;
+        left: 5%;
+    }
+
+    body::after {
+        bottom: 5%;
+        right: 5%;
+    }
+
+.gif-1 {
+    top: 15%;
+    left: 15%;
+}
+
+.gif-2 {
+    top: 25%;
+    right: 15%;
+}
+
+.gif-3 {
+    bottom: 15%;
+    left: 10%;
+}
+
+.gif-4 {
+    top: 50%;
+    left: 5%;
+}
+
+.gif-5 {
+    top: 70%;
+    right: 10%;
+}
+
+.gif-6 {
+    top: 30%;
+    left: 25%;
+}
+
+.gif-7 {
+    bottom: 25%;
+    right: 25%;
+}
+
+.gif-8 {
+    top: 10%;
+    right: 20%;
+}
+
+header {
+    background-color: #000000; /* Pure black for header */
+    padding: 1em;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+nav {
+    text-align: right;
+    padding: 0.5em 1em;
+}
+
+    nav a {
+        color: #1AFF00; /* Bright green accent */
+        text-decoration: none;
+        margin-left: 1.5em;
+        font-weight: bold;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+        nav a:hover {
+            color: #e0e0e0;
+            transform: scale(1.1);
+        }
+
+.container {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+.card {
+    background-color: #000000; /* Pure black for cards */
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-left: 4px solid #1AFF00;
+}
+
+    .card h1, .card h2 {
+        color: #1AFF00;
+    }
+
+img.profile {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 3px solid #1AFF00;
+    display: block;
+    margin: 1em auto;
+}
+
+.animated-border {
+    animation: pulse-border 2s infinite;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+    ul li {
+        padding: 0.5em 0;
+        position: relative;
+        padding-left: 2em;
+        transition: transform 0.3s;
+    }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+
+        ul li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #1AFF00;
+        }
+
+a {
+    color: #1AFF00;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+footer {
+    background-color: #000000; /* Pure black for footer */
+    text-align: center;
+    padding: 1em;
+    color: #e0e0e0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes pulse-border {
+    0% {
+        border-color: #1AFF00;
+    }
+
+    50% {
+        border-color: #7bff66;
+    }
+
+    100% {
+        border-color: #1AFF00;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+        nav a {
+            display: inline-block;
+            margin: 0.5em;
+        }
+
+    body::before, body::after, .gif-1, .gif-2, .gif-3, .gif-4, .gif-5, .gif-6, .gif-7, .gif-8 {
+        width: 50px;
+        height: 50px;
+    }
+}
