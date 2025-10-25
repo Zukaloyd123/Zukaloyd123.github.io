@@ -15,7 +15,7 @@ body {
     position: absolute;
     width: 80px;
     height: 80px;
-    opacity: 0.6; /* Darker GIFs as requested */
+    opacity: 0.6; /* Darker GIFs */
     z-index: -1;
 }
 
@@ -175,6 +175,7 @@ footer {
 .player {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1em;
     margin: 1em 0;
 }
@@ -184,10 +185,21 @@ audio {
     max-width: 500px;
 }
 
-.playlist-text {
-    text-align: center;
-    font-size: 1.2em;
+#track-name {
     color: #1AFF00;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.record {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.rotating {
+    animation: rotate 4s linear infinite;
 }
 
 /* Animations */
@@ -217,6 +229,16 @@ audio {
     }
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .fade-in {
     animation: fade-in 1s ease-out;
 }
@@ -234,6 +256,11 @@ audio {
     .gif {
         width: 40px;
         height: 40px;
+    }
+
+    .record {
+        width: 60px;
+        height: 60px;
     }
     /* Adjusted positions for mobile (360x640, 9:16), avoiding card */
     .gif-1 {
